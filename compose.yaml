@@ -1,0 +1,14 @@
+services:
+  neo4j:
+    image: 'neo4j:latest'
+    environment:
+      - 'NEO4J_AUTH=neo4j/password'
+    ports:
+      - '7474:7474'
+      - '7687:7687'
+    volumes:
+      - d:/docker/neo4j/data:/data
+      - d:/docker/neo4j/logs:/logs
+      - d:/docker/neo4j/import:/import
+      - d:/docker/neo4j/plugins:/plugins
+      - d:/docker/neo4j/conf:/conf
